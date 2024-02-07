@@ -7,12 +7,15 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
-    "@sap/cds-dk": "^7.6.0",
-    "express": "^4"
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "express": "^4",
+    "passport": "^0"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
-    "@sap/ux-specification": "^1.120.2"
+    "@sap/cds-dk": "^7.6.0",
+    "@sap/ux-specification": "^1.120.3"
   },
   "scripts": {
     "start": "cds-serve",
@@ -20,5 +23,13 @@
   },
   "sapux": [
     "app/empstat"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa",
+        "db": "hana"
+      }
+    }
+  }
 }
