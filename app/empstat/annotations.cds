@@ -117,3 +117,18 @@ annotate service.Employee with {
         },
         Common.ValueListWithFixedValues : true
 )};
+annotate service.Employee with @(
+    UI.HeaderInfo : {
+        TypeName : 'Employee',
+        TypeNamePlural : 'Employees',
+        Title : {
+            $Type : 'UI.DataField',
+            Value : emp_id,
+        },
+        Description : {
+            $Type : 'UI.DataField',
+            Value : name,
+        },
+        TypeImageUrl : 'sap-icon://employee',
+    }
+);
